@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>WetterThing</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <div>JAVASCRIPT</div><br>
+        <a href="#" onclick="alert(123);">Meldung Klick</a><br><br>
+        <a href="#" onmousemove="alert(123);">Meldung Move</a><br><br>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>  
+        <script>    
+            $(document).ready(function(){
+              
+        $.ajax({
+            dataType: 'jsonp',
+            url: 'https://api.forecast.io/forecast/712e31acc32049f53e51ae6e6f7298f2/47.4667,-9.4?callback=?&units=si'
+            
+        }).done(function(data) {
+            console.log(data);
+            var temp = data.currently.apparentTemperature;
+            console.log(temp);
+            $("h1").text("Momentane Temperatur: " + temp + "°C");
+            $("p").text("Hier würde Ort stehen");
+             
+        });
+        
+            });
+            
+        </script>  
+        
+        <h1></h1>
+        
+        <p></p>
+        
+        <script>
+            var meine = "Hallo Welt";
+            alert(meine);
+            
+            for (var i = 1; i <= 20; i++){
+                if(i % 7 === 0){
+                console.log(i);
+            }
+            }
+        </script>
+    </body>
+</html>
