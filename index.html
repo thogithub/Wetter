@@ -1,50 +1,35 @@
-<!DOCTYPE html>
-
+<!DOCTYPE html> 
 <html>
-    <head>
-        <title>WetterThing</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    
-    <body>
-        <div>JAVASCRIPT</div><br>
-        <a href="#" onclick="alert(123);">Meldung Klick</a><br><br>
-        <a href="#" onmousemove="alert(123);">Meldung Move</a><br><br>
-        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>  
-        <script>    
-            $(document).ready(function(){
-              
-        $.ajax({
-            dataType: 'jsonp',
-            url: 'https://api.forecast.io/forecast/712e31acc32049f53e51ae6e6f7298f2/47.4667,-9.4?callback=?&units=si'
+<head>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>Willkommen</h1>
+        </div>
+        <div role="main" class="ui-content">
             
-        }).done(function(data) {
-            console.log(data);
-            var temp = data.currently.apparentTemperature;
-            console.log(temp);
-            $("h1").text("Momentane Temperatur: " + temp + "°C");
-            $("p").text("Hier würde Ort stehen");
-             
-        });
-        
-            });
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
             
-        </script>  
-        
-        <h1></h1>
-        
-        <p></p>
-        
-        <script>
-            var meine = "Hallo Welt";
-            alert(meine);
+            <img class="content-image" src="javascript/jquery/pics/feld.jpg" alt="fish">
             
-            for (var i = 1; i <= 20; i++){
-                if(i % 7 === 0){
-                console.log(i);
-            }
-            }
-        </script>
-    </body>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        <div data-role="footer">
+            <h1>Auf Wiedersehen</h1>
+        </div>
+        
+    </div>
+</body>
 </html>
