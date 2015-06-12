@@ -30,7 +30,7 @@ $(document).ready(function() {
             $('.longitude').text(data.currently.apparentTemperature + "°C");
 
             // GOOGLE GEOCODING
-            
+
                 $.ajax({
                     url: 'https://maps.googleapis.com/maps/api/geocode/json',
                     data:{
@@ -40,6 +40,8 @@ $(document).ready(function() {
                     }
                 }).done(function(data){
                     console.log(data);
+
+                    $('.ort').text(data.results[0].address_components[1].long_name);
                 });
 
         });
