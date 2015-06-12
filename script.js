@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
      navigator.geolocation.getCurrentPosition(function(position) {
         //console.log(position);
@@ -21,10 +21,11 @@ $(document).ready(function(){
                 },
 
             dataType: 'jsonp'
-            }).done(function(data){
+            }).done(function(data) {
 
 
             console.log(data);
+        });
 
     });
 });
