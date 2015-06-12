@@ -13,7 +13,7 @@ $(document).ready(function(){
      });
 
      $ajax({
-    url: 'https://api.forecast.io/forecast/712e31acc32049f53e51ae6e6f7298f2/',longitude,','latitude
+    url: 'https://api.forecast.io/forecast/712e31acc32049f53e51ae6e6f7298f2/' + koordinaten.longitude + ',' + koordinaten.latitude
     data:{
         units: 'si',
         lang: 'de'
