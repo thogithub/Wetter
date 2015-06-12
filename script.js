@@ -7,8 +7,8 @@ $(document).ready(function() {
          // $('.accuracy').text(position.coords.accuracy);
 
           var koordinaten = {
-            longitude: position.coords.longitude,
-            latitude: position.coords.latitude
+            longitude: position.coords.latitude,
+            latitude: position.coords.longitude
 
           };
          
