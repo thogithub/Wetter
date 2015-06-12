@@ -14,7 +14,7 @@ $(document).ready(function() {
          
 
         $.ajax({
-            url: 'https://api.forecast.io/forecast/712e31acc32049f53e51ae6e6f7298f2/' + koordinaten.longitude + ',' + koordinaten.latitude,
+            url: 'https://api.forecast.io/forecast/e755dcb8a5bf2fe761849bf9d07d6f7d/' + koordinaten.longitude + ',' + koordinaten.latitude,
             data:{
                 units: 'si',
                 lang: 'de'
