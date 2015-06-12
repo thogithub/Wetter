@@ -29,7 +29,8 @@ $(document).ready(function() {
 
             $('.longitude').text(data.currently.apparentTemperature + "°C");
 
-
+            // GOOGLE GEOCODING
+            
                 $.ajax({
                     url: 'https://maps.googleapis.com/maps/api/geocode/json',
                     data:{
