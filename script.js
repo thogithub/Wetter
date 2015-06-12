@@ -26,7 +26,7 @@ $(document).ready(function() {
 
             console.log(data);
 
-            $('.longitude').text(koordinaten.longitude);
+            $('.longitude').text(data.currently.apparentTemperature);
         });
 
     });
