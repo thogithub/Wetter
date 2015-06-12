@@ -9,8 +9,9 @@ $(document).ready(function(){
           var koordinaten = {
             longitude: position.coords.longitude,
             latitude: position.coords.latitude
+
           };
-         });
+         
 
              $ajax({
             url: 'https://api.forecast.io/forecast/712e31acc32049f53e51ae6e6f7298f2/' + koordinaten.longitude + ',' + koordinaten.latitude
