@@ -21,12 +21,26 @@ $(document).ready(function() {
             },
 
             dataType: 'jsonp'
+
         }).done(function(data) {
 
 
             console.log(data);
 
             $('.longitude').text(data.currently.apparentTemperature + "°C");
+
+
+                $.ajax({
+                    url: 'https://maps.googleapis.com/maps/api/geocode/json?'
+                    data:{
+                        latlng: koordinaten.longitude + ',' + koordinaten.latitude,
+                        key: 'AIzaSyCHOUgQ4bFZJUA1igV1ZA9pAnS0e9ikWA8',
+                        language: 'de'
+                    }
+                }).done(function(data){
+                    console.log(data);
+                };
+
         });
 
     });
