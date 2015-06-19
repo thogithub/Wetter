@@ -11,9 +11,12 @@ $(document).ready(function() {
          //$('.latitude').text(position.coords.latitude);
          // $('.accuracy').text(position.coords.accuracy);
 
+
+         // Koordinaten bewusst vertauscht.
+         
           var koordinaten = {
-            longitude: position.coords.longitude,
-            latitude: position.coords.latitude,
+            longitude: position.coords.latitude,
+            latitude: position.coords.longitude,
 
 
           };
@@ -48,7 +51,7 @@ $(document).ready(function() {
                 $.ajax({
                     url: 'https://maps.googleapis.com/maps/api/geocode/json',
                     data:{
-                        latlng: koordinaten.latitude + ',' + koordinaten.longitude,
+                        latlng: koordinaten.longitude + ',' + koordinaten.latitude,
                         key: 'AIzaSyDgYh-UffzCV54XCcReML4WSqyb0_zv8x8',
                         language: 'de'
                     }
