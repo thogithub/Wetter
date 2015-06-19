@@ -12,4 +12,9 @@ p{
 	text-align: center;
 }
 
-
+.content-image{
+	display: block;
+	margin: auto;
+	height: 64;
+	border-radius: 5px;
+}

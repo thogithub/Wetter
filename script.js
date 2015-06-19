@@ -33,9 +33,15 @@ $(document).ready(function() {
 
             console.log(data);
 
-            $('.longitude').text(data.currently.apparentTemperature + "°C");
+
+
+            $('.temperatur').text(data.currently.temperature + "°C");
+
+            $('.summary').text(data.currently.summary);
 
             var iicon = data.currently.icon;
+
+            skycons.set($('.icon')[0], data.currently.icon);
 
             // GOOGLE GEOCODING
 
@@ -59,13 +65,13 @@ $(document).ready(function() {
             
 
         //skycons.add($('.icon')[0], Skycons.RAIN);
-        skycons.add($('.icon')[0], Skycons.iicon);
+        //skycons.add($('.icon')[0], Skycons.iicon);
 
         skycons.play();
 
-        setTimeout(function(){
-            skycons.set($('.icon')[0], Skycons.PARTLY_CLOUDY_DAY)
-        }, 5000)
+        //setTimeout(function(){
+        //    skycons.set($('.icon')[0], Skycons.PARTLY_CLOUDY_DAY)
+        // }, 5000)
 
 });
 
