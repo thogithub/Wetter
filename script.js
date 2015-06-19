@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+    var skycons = new Skycons({
+            color: "#bada55",
+            resizeClear: true
+        });
+
      navigator.geolocation.getCurrentPosition(function(position) {
         //console.log(position);
         //$('.longitude').text(position.coords.longitude);
@@ -7,8 +12,9 @@ $(document).ready(function() {
          // $('.accuracy').text(position.coords.accuracy);
 
           var koordinaten = {
-            longitude: position.coords.latitude,
-            latitude: position.coords.longitude
+            longitude: position.coords.longitude,
+            latitude: position.coords.latitude,
+
 
           };
          
@@ -29,12 +35,14 @@ $(document).ready(function() {
 
             $('.longitude').text(data.currently.apparentTemperature + "°C");
 
+            var iicon = data.currently.icon;
+
             // GOOGLE GEOCODING
 
                 $.ajax({
                     url: 'https://maps.googleapis.com/maps/api/geocode/json',
                     data:{
-                        latlng: koordinaten.longitude + ',' + koordinaten.latitude,
+                        latlng: koordinaten.latitude + ',' + koordinaten.longitude,
                         key: 'AIzaSyDgYh-UffzCV54XCcReML4WSqyb0_zv8x8',
                         language: 'de'
                     }
@@ -47,5 +55,17 @@ $(document).ready(function() {
         });
 
     });
+
+            
+
+        //skycons.add($('.icon')[0], Skycons.RAIN);
+        skycons.add($('.icon')[0], Skycons.iicon);
+
+        skycons.play();
+
+        setTimeout(function(){
+            skycons.set($('.icon')[0], Skycons.PARTLY_CLOUDY_DAY)
+        }, 5000)
+
 });
 

@@ -1,0 +1,15 @@
+h2 {
+text-align: center;
+}
+
+canvas{
+display: block;
+height: 128px;
+margin: 0 auto;
+}
+
+p{
+	text-align: center;
+}
+
+
