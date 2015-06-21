@@ -18,7 +18,6 @@ $(document).ready(function() {
             longitude: position.coords.latitude,
             latitude: position.coords.longitude,
 
-
           };
          
 
@@ -27,11 +26,11 @@ $(document).ready(function() {
             data:{
                 units: 'si',
                 lang: 'de'
-            },
+        },
 
             dataType: 'jsonp'
 
-        }).done(function(data) {
+        })  .done(function(data) {
 
 
             //console.log(data);
@@ -61,10 +60,6 @@ $(document).ready(function() {
                     skycons.set($('.icon'+i)[0], data.daily.data[i].icon); 
 
                     }
-
-
-
-           
 
             // GOOGLE GEOCODING
 
