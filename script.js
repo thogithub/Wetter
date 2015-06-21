@@ -34,7 +34,7 @@ $(document).ready(function() {
         }).done(function(data) {
 
 
-            console.log(data);
+            //console.log(data);
 
             // WETTERDATEN AUSLESEN        
 
@@ -76,7 +76,7 @@ $(document).ready(function() {
                         language: 'de'
                     }
                 }).done(function(data){
-                    console.log(data);
+                    //console.log(data);
 
                     $('.ort').text(data.results[0].address_components[1].long_name);
 
