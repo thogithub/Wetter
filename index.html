@@ -1,10 +1,10 @@
 <!DOCTYPE html> 
 
-<!--22.06.Abgabe-->
+<!--22.06.Abgabe!-->
 
 <html>
 <head>
-	<title>Page Title</title>
+	<title>Toms Wetter</title>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="mobile-web-app-capable" content="yes">
@@ -37,28 +37,39 @@
             
             
              <p>
-            <a href="#sub" class="ui-btn" data-transition="flip" data-direction="reverse">Sub Page</a>
+            <a href="#sub" class="ui-btn" data-transition="flip" data-direction="reverse">Vorhersage</a>
             </p>
         </div>
     </div>
 
 
  <div  data-role="page" id="sub">
+
                 <div data-role="header">
-                    <h1>Sub Site</h1>
+                    <h1>Vorhersage</h1>
                 </div>
 
                         <div role="main" class="ui-content">
-            
-                                    <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                     </p>
-            
-                                         <img class="content-image" src="flyfishfly.jpg" alt="fish">
-            
-                                    <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                     </p>
+
+                                    <h2 class="tag">morgen<h2>
+                                    <h2 class="temperatur0"></h2>
+                                    <p class="summary0"></p>
+                                    <h2 class="accuracy0"></h2>
+                                    <canvas class="icon0" height="128" width="128"></canvas>
+                                    <hr>
+
+                                    <h2 class="tag">übermorgen<h2>
+                                    <h2 class="temperatur1"></h2>
+                                    <p class="summary1"></p>
+                                    <h2 class="accuracy1"></h2>
+                                    <canvas class="icon1" height="128" width="128"></canvas>
+                                    <hr>
+
+                                    <h2 class="tag">überübermorgen<h2>
+                                    <h2 class="temperatur2"></h2>
+                                    <p class="summary2"></p>
+                                    <h2 class="accuracy2"></h2>
+                                    <canvas class="icon2" height="128" width="128"></canvas>
 
                                     <p>
                                      <a href="#main" class="ui-btn" data-transition="flip" data-direction="reverse">Main Page</a>

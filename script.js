@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 
          // Koordinaten bewusst vertauscht.
-         
+
           var koordinaten = {
             longitude: position.coords.latitude,
             latitude: position.coords.longitude,
@@ -36,15 +36,35 @@ $(document).ready(function() {
 
             console.log(data);
 
+            // WETTERDATEN AUSLESEN        
+
+                     $('.temperatur').text(data.currently.temperature + "°C");
+
+                     $('.summary').text(data.currently.summary);
+
+                    var iicon = data.currently.icon;
+
+                    skycons.set($('.icon')[0], data.currently.icon);
+
+            // PROGNOSE AUF ZWEITER SEITE
+
+                    for (i = 0; i < 3; i++) {
+
+                        var tempx = data.daily.data[i].temperatureMin + data.daily.data[i].temperatureMax / 2;
+
+                        var temp = Math.round(tempx,2);
+            
+                     $('.temperatur'+i).text(temp + "°C");
+
+                     $('.summary'+i).text(data.daily.data[i].summary);
+
+                    skycons.set($('.icon'+i)[0], data.daily.data[i].icon); 
+
+                    }
 
 
-            $('.temperatur').text(data.currently.temperature + "°C");
 
-            $('.summary').text(data.currently.summary);
-
-            var iicon = data.currently.icon;
-
-            skycons.set($('.icon')[0], data.currently.icon);
+           
 
             // GOOGLE GEOCODING
 
@@ -59,6 +79,9 @@ $(document).ready(function() {
                     console.log(data);
 
                     $('.ort').text(data.results[0].address_components[1].long_name);
+
+            
+
                 });
 
         });
