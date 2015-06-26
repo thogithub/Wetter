@@ -49,7 +49,7 @@ $(document).ready(function() {
 
                     for (i = 0; i < 3; i++) {
 
-                        var tempx = data.daily.data[i].temperatureMin + data.daily.data[i].temperatureMax / 2;
+                        var tempx = data.daily.data[i].temperatureMin + data.daily.data[i].temperatureMax / 2 - 2;
 
                         var temp = Math.round(tempx,2);
             
